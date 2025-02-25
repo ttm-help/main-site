@@ -1,45 +1,61 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+name: Оксана Коновалова
+bio: Психолог
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Оксана Коновалова
-email: hello@patdryburgh.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Когнитивный психотерапевт
-baseurl: "/hitchens" # the subpath of your site, e.g. /blog
-url: "https://patdryburgh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-icon: /assets/images/icon-512.png
-twitter_username: patdryburgh
-github_username:  patdryburgh
+description: Сайт психолога Коноваловой Оксаны
 
-# Build settings
-markdown: kramdown
+picture: assets/images/profile.jpg
+url: https://oksana-konovalova.com
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+social-media: true
+instagram: myinstagram
+telegram: Konovalova_Oksana
+whatsapp: 79053810566
 
-plugins:
-  - jekyll-paginate
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
 
-paginate: 3
-paginate_path: "/page/:num/"
+# do you want to display an about section? true or false
+about: true
+
+# do you want to display a skills section? true or false
+skills: true
+skills-list:
+    - Юридический психолог (ФГБОУ ВПО СГЮА)
+    - Когнитивно-поведенческая психотерапия (АНО ДПО АПС)
+    - Психологическое консультирование родителей (ФГБНУ ПИРАО)
+    - Библиотерапия в работе с детьми (ФГБНУ ПИРАО)
+    - Professional Coach (IICA ICF ICF)
+    - Professional coaching of groups and companies (IICA ICF ICF)
+    - НЛП-практик
+    - 'EFT Emotional Freedom Technique: Hair Pulling & Skin Picking'
+    - Irvin Yalom and the Art of Psychotherapy (Newpsy education)
+    - ACT in Action by Steven C.Hayes (Newpsy education)
+
+offers: true
+offers-list:
+    - консультирование 28 000 рублей за блок из 4 консультаций
+    - участие в клубе с обратной связью 15 000 рублей за 4 недели
+    - участие в клубе без обратной связи 3 200 рублей за 4 недели
+
+# do you want to display a projects section? true or false
+projects: false
+
+# add your projects here
+project-list:
+    QuizKnit:
+        name: QauizKnit
+        description: AI powered web application that generates a quiz based on user provided text. Users can share the quiz using a custom url and also test their knowledge by exploring quizzes created by other people.
+        url: https://quizknit.com
+
+# do you want to display the theme attribution? true or false
+footer: true
+
+# Enable animations? true or false
+animation: true
+
+gems:
+    - jekyll-seo-tag
+
+exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, vendor]

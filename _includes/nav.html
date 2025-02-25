@@ -1,0 +1,43 @@
+{% if site.about %}
+    <nav class="nav-home">
+        <ul class="list">
+            <li class="item">
+                <h2>Обо мне</h2>
+            </li>
+        </ul>
+    </nav> 
+    {% include about.html %}
+{% endif %}
+
+{% if site.offers %}
+    <nav class="nav-home">
+        <ul class="list">
+            <li class="item">
+                <h2>Услуги</h2>
+            </li>
+        </ul>
+    </nav>
+    {% include offers.html %}
+{% endif %}
+
+{% if site.skills %}
+    <nav class="nav-home">
+        <ul class="list">
+            <li class="item">
+                <h2>Образование</h2>
+            </li>
+        </ul>
+    </nav>
+    {% include skills.html %}
+{% endif %}
+
+{% if site.projects %}
+    <nav class="nav-home">
+        <ul class="list">
+            <li class="item">
+                <h2>Проекты</h2>
+            </li>
+        </ul>
+    </nav>
+    {% include projects.html %}
+{% endif %}
