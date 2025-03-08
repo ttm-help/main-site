@@ -1,6 +1,6 @@
 name: Оксана Коновалова
 bio: Психолог
-
+footer_title: ИП Коновалова Оксана Валерьевна ИНН 645293010504
 description: Сайт психолога Коноваловой Оксаны
 
 picture: assets/images/profile.jpg
@@ -10,6 +10,7 @@ social-media: true
 #instagram: myinstagram
 telegram: Konovalova_Oksana
 whatsapp: 79053810566
+email: ttm.help.ru@gmail.com
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -35,7 +36,8 @@ skills-list:
 
 offers: true
 offers-list:
-    - Консультирование 28 000 рублей за блок из 4 консультаций
+    - Первичная консультация 4 000 рублей (длительность 55 минут)
+    - Консультирование 28 000 рублей за блок из 4 консультаций (1 консультация 55 минут)
     - Участие в клубе с обратной связью 15 000 рублей за 4 недели
     - Участие в клубе без обратной связи 3 200 рублей за 4 недели
 
