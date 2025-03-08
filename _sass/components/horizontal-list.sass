@@ -1,8 +1,12 @@
 .horizontal-list
     ul
         list-style-type: none
-    li
-        float: left
+
+    @media #{$above}
+        li
+            float: left
     a
         display: block
-        padding: 16px
+        padding: 5px
+        @media #{$above}
+            padding: 16px
