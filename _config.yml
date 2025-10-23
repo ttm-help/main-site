@@ -23,22 +23,16 @@ about: true
 # do you want to display a skills section? true or false
 skills: true
 skills-list:
-    - Юридический психолог (ФГБОУ ВПО СГЮА)
-    - Когнитивно-поведенческая психотерапия (АНО ДПО АПС)
-    - Психологическое консультирование родителей (ФГБНУ ПИРАО)
-    - Библиотерапия в работе с детьми (ФГБНУ ПИРАО)
-    - Professional Coach (IICA ICF ICF)
-    - Professional coaching of groups and companies (IICA ICF ICF)
-    - НЛП-практик
-    - 'EFT Emotional Freedom Technique: Hair Pulling & Skin Picking'
-    - Irvin Yalom and the Art of Psychotherapy (Newpsy education)
-    - ACT in Action by Steven C.Hayes (Newpsy education)
+    - Юридический психолог (Саратовская государственная юридическая академия)
+    - Клинический психолог (Институт психотерапии и клинической психологии)
+    - Когнитивно-поведенческая психотерапия (Академия профессиональных стандартов)
+    - Тренер навыков ДБТ (Международная академия научной психологии)
 
 offers: true
 offers-list:
-    - Первичная консультация 8 500 рублей (длительность от 40 до 80 минут)
+    - Первичная консультация 8 500 рублей (длительность 55 минут)
     - Консультирование 34 000 рублей за блок из 4 консультаций (1 консультация длительностью 55 минут)
-    - Участие в клубе с обратной связью 15 000 рублей за 4 недели
+    - Участие в клубе с обратной связью 19 000 рублей за 4 недели
 
 # do you want to display a projects section? true or false
 projects: false
