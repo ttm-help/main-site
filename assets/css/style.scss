@@ -1,0 +1,41 @@
+---
+---
+
+$epsilon: #e5e5e5;   // светлая серая линия разделителя
+$gama: #555;         // основной текст
+$beta: #222;         // активные ссылки / hover
+$delta: #000;        // тёмный/акцентный цвет
+
+// Fonts
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+
+
+// Bootstrap
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/bootstrap-grid";
+@import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
+
+// Libraries
+
+// Components
+@import "components/footer";
+@import "components/offer-card";
+@import "components/feedbacks";
+@import "components/social-links";
+
+// Pages
+
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: $font-family-base;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+img {
+  display: block;
+}

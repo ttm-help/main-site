@@ -1,0 +1,16 @@
+.video-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 8px;
+
+  .video-card {
+    flex: 0 0 260px; // фиксированная ширина карточки
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+  }
+}

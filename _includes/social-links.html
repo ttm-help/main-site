@@ -1,0 +1,32 @@
+<div class="social-links">
+    {% if site.data.contacts.telegram %}
+        <a class="link" data-title="Написать мне в телеграм" href="https://t.me/{{ site.data.contacts.telegram }}" target="_blank">
+            <svg class="icon icon-telegram"><use xlink:href="#icon-telegram"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.data.contacts.whatsapp %}
+        <a class="link" data-title="Написать мне в ватсапп" href="https://wa.me/{{ site.data.contacts.whatsapp }}" target="_blank">
+            <svg class="icon icon-whatsapp"><use xlink:href="#icon-whatsapp"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.data.contacts.instagram %}
+        <a class="link" data-title="Написать мне в инстаграм" href="http://instagram.com/{{ site.data.contacts.instagram }}" target="_blank">
+            <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+        </a>
+    {% endif %}
+
+
+    {% if site.data.contacts.youtube %}
+        <a class="link" data-title="youtube.com/{{ site.youtube }}" href="http://youtube.com/{{ site.data.contacts.youtube }}" target="_blank">
+            <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.data.contacts.email %}
+        <a class="link" data-title="Написать мне на почту" href="mailto:{{ site.data.contacts.email }}">
+            <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+        </a>
+    {% endif %}
+</div>

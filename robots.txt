@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oksana-konovalova.com/sitemap.xml

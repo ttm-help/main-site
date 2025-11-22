@@ -1,0 +1,43 @@
+baseurl: ''
+title: "Лечение трихотилломании: как перестать выдергивать волосы — помощь психолога онлайн"
+description:
+  "Психотерапия при трихотилломании. Эффективные методы: когнитивно-поведенческая терапия, поддержка онлайн, индивидуальная работа. Запишитесь на консультацию."
+url: "https://ttm-help.ru"
+permalink: /:slug.html
+image: /assets/images/illustrations/main-page-image.webp
+
+author:
+  image: /assets/images/illustrations/about-photo.webp
+  name: Оксана Коновалова
+  about: Когнитивно-поведенческий психотерапевт, клинический психолог, основатель проекта TTM-HELP
+  expertises: Трихотилломания, Когнитивно-поведенческая терапия (КПТ), Диалектическая поведенческая терапия (ДБТ), Терапия принятия и ответственности (ACT), Обсессивно-компульсивные расстройства, депрессивные расстройства
+
+footer_title: ИП Коновалова Оксана Валерьевна ИНН 645293010504
+sass:
+  indentWidth: 4
+  precision: 10
+  style: compressed # possible values: nested expanded compact compressed
+  sourcemap: always
+
+jekyll-minifier:
+  compress_css: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sass-converter
+  - jekyll-minifier
+  - jekyll-sitemap
+  - jekyll-image-size
+
+exclude:
+  - "*.iml"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
