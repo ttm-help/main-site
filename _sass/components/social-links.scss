@@ -1,27 +1,32 @@
 .social-links {
-  display: flex;
-  gap: 30px;
-  margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
 
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @media (min-width: 768px) {
-      justify-content: flex-start;
-  }
-
-  .link {
-    display: inline-flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    text-decoration: none;
-    cursor: pointer;
 
-    &:hover .icon {
-      fill: $delta;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
     }
-  }
+
+    .link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover .icon {
+            fill: $delta;
+        }
+    }
 }
+
+.social-links .link:hover .icon {
+  transform: scale(1.2) translateY(-2px);
+}
+
