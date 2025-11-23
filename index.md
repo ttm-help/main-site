@@ -17,7 +17,7 @@ image: ""
                         class="figure-img img-fluid rounded-5 shadow mb-3"
                         alt="{{ page.title }}"/>
                 <div class="me-3">
-                    <span class="fs-4">Я Оксана Коновалова — психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
+                    <span class="fs-4">Я, Оксана Коновалова — клинический психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
                 </div>
             </div>
         </div>
@@ -182,8 +182,8 @@ image: ""
                                     <div class="row text-center mt-2 mb-4">
                                         {% assign results = offer.results %}
                                         {% for result in results %}
-                                            <div class="d-flex align-items-center">
-                                                <svg width="50" height="50" class="me-2 d-block">
+                                            <div class="d-flex align-items-center mt-2">
+                                                <svg width="50" height="50" class="me-2 d-block" style="flex-shrink: 0">
                                                     <use xlink:href="#icon-mark"></use>
                                                 </svg>
                                             
