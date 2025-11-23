@@ -14,15 +14,19 @@ image: ""
             <div class="col-12 col-md-9 d-flex flex-column align-items-end text-end">
                 <img src="/assets/images/main.jpg"
                         style="height:300px"
-                        class="figure-img img-fluid rounded-5 shadow"
+                        class="figure-img img-fluid rounded-5 shadow me-3"
                         alt="{{ page.title }}"/>
-                <span class="fs-4">Я Оксана Коновалова — психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
+                <div class="me-3">
+                    <span class="fs-4">Я Оксана Коновалова — психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
+                </div>
             </div>
         </div>
 
         <div class="row responsive-padding">
            <div class="col-12 col-md-3 mb-5">
-                Обо мне
+                <span class="display-7">
+                    Обо мне
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="mx-3">
@@ -34,7 +38,9 @@ image: ""
 
         <div class="row responsive-padding">
              <div class="col-12 col-md-3 mb-5">
-                С чем я работаю
+                <span class="display-7">
+                    С чем я работаю
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="ms-3">
@@ -63,7 +69,9 @@ image: ""
 
         <div class="row responsive-padding">
             <div class="col-12 col-md-3 mb-5">
-                Как проходит работа
+                <span class="display-7">
+                    Как проходит работа
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="mx-3">
@@ -75,7 +83,9 @@ image: ""
 
         <div class="row responsive-padding">
             <div class="col-12 col-md-3 mb-5">
-                Образование
+                <span class="display-7">
+                    Образование
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="mx-3">
@@ -94,7 +104,9 @@ image: ""
 
         <div class="row responsive-padding">
             <div class="col-12 col-md-3 mb-5">
-                Отзывы
+                <span class="display-7">
+                    Отзывы
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="ms-3">
@@ -103,7 +115,7 @@ image: ""
                         {% for feedback in feedbacks %}
                             <div class="video-card">
                                 <img src="{{ feedback.url }}">
-                                <p class="fw-bold mt-2 mb-1">{{ feedback.name }}</p>
+                                <p class="mt-2 mb-1">{{ feedback.name }}</p>
                             </div>
                         {% endfor %}
                     </div>
@@ -113,8 +125,10 @@ image: ""
 
 
         <div class="row responsive-padding">
-            <div class="col-12 col-md-3 mb-5">
-                Стоимость
+            <div class="col-12 col-md-3">
+                <span class="display-7">
+                    Стоимость
+                </span>
             </div>
             <div class="col-12 col-md-9">
                 <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
