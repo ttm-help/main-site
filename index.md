@@ -8,10 +8,10 @@ image: ""
 <div style="padding-top: 150px">
     <div class="container mx-auto" style="w-75">
         <div class="row">
-            <div class="col-auto" style="min-width: 400px;">
+           <div class="col-12 col-md-3 mb-5">
                 {% include social-links.html %}
             </div>
-            <div class="col d-flex flex-column align-items-end text-end">
+            <div class="col-12 col-md-9 d-flex flex-column align-items-end text-end">
                 <img src="/assets/images/main.jpg"
                         style="height:300px"
                         class="figure-img img-fluid rounded-5 shadow"
@@ -21,20 +21,20 @@ image: ""
         </div>
 
         <div class="row mt-5">
-            <div class="col-auto" style="min-width: 400px;">
+           <div class="col-12 col-md-3 mb-5">
                 Обо мне
             </div>
-            <div class="col">
+            <div class="col-12 col-md-9">
                 <p>Работаю с 2012 года и использую доказательные методы психотерапии, признанные ведущими международными организациями — APA (Американская психологическая ассоциация), NICE (Национальный институт здравоохранения Великобритании) и Всемирной организацией здравоохранения (WHO).</p>
                 <p>Протоколы работы прошли десятки клинических исследований — измеримо, безопасно и без магического мышления. </p>
             </div>
         </div>
 
         <div class="row mt-5">
-             <div class="col-auto" style="min-width: 400px;">
+             <div class="col-12 col-md-3 mb-5">
                 С чем я работаю
             </div>
-            <div class="col">
+            <div class="col-12 col-md-9">
                 {% assign services = site.data.services.list %}
                 {% for service in services %}
                     <div class="row align-items-center">
@@ -58,20 +58,20 @@ image: ""
 
 
         <div class="row mt-5">
-            <div class="col-auto" style="min-width: 400px;">
+            <div class="col-12 col-md-3 mb-5">
                 Как проходит работа
             </div>
-            <div class="col">
+            <div class="col-12 col-md-9">
                 <p>Онлайн, 1 раз в неделю, продолжительность 55 минут. Между встречами — поддержка и упражнения, чтобы результат закреплялся в реальной жизни.</p>
             </div>
         </div>
 
 
         <div class="row mt-5">
-            <div class="col-auto" style="min-width: 400px;">
+            <div class="col-12 col-md-3 mb-5">
                 Образование
             </div>
-            <div class="col">
+            <div class="col-12 col-md-9">
                 {% assign educations = site.data.education.list %}
                 {% for education in educations %}
                     <div class="row">
@@ -85,10 +85,10 @@ image: ""
 
 
         <div class="row mt-5">
-            <div class="col-auto" style="min-width: 400px;">
+            <div class="col-12 col-md-3 mb-5">
                 Отзывы
             </div>
-            <div class="col d-flex">
+            <div class="col-12 col-md-9">
                 <div class="video-scroll-wrapper w-100">
                     {% assign feedbacks = site.data.feedbacks.list %}
                     {% for feedback in feedbacks %}
@@ -103,10 +103,10 @@ image: ""
 
 
         <div class="row mt-5">
-            <div class="col-auto" style="min-width: 400px;">
+            <div class="col-12 col-md-3 mb-5">
                 Стоимость
             </div>
-            <div class="col">
+            <div class="col-12 col-md-9">
                 <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
                     {% assign offers = site.data.offers.list %}
                     {% for offer in offers %}
