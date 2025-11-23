@@ -3,6 +3,13 @@
   gap: 30px;
   margin-top: 20px;
 
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+      justify-content: flex-start;
+  }
+
   .link {
     display: inline-flex;
     align-items: center;
