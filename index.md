@@ -129,8 +129,8 @@ image: ""
                             <div class="modal fade" id="feedbackModal-{{ forloop.index0 }}" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-xl">
                                     <div class="modal-content bg-dark rounded-4">
-                                        <div class="modal-body p-0">
-                                            <div class="ratio ratio-16x9">
+                                        <div class="modal-body p-1">
+                                            <div>
                                                 {% include video-block.html item=feedback %}
                                             </div>
                                         </div>

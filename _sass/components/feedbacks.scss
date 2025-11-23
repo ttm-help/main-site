@@ -14,3 +14,45 @@
     }
   }
 }
+
+
+.glass-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+
+    width: 200px;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.glass-play-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Active */
+.glass-play-btn:active {
+    background: rgba(255, 255, 255, 0.2);
+}

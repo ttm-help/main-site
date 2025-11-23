@@ -1,134 +1,121 @@
-<div>
-    <div class="mb-3">
-        <!-- Content -->
-        <div class="tab-content mt-1" id="videoTabsContent">
-            <!-- VK превью -->
-            <div class="tab-pane fade show active" id="video1" role="tabpanel" aria-labelledby="video1-tab">
-                <div class="ratio ratio-16x9 position-relative" id="vk-container">
-                    <img src="{{ include.item.image }}" alt="vk preview" class="my-0">
-                    <button type="button" id="vk-load-btn"
-                            aria-label="Запустить vk видео"
-                            style="
-                                position:absolute;
-                                top:50%;
-                                left:50%;
-                                transform:translate(-50%,-50%);
-                                background: #00b2ff;
-                                color:#fff;
-                                border:0; border-radius:50%;
-                                width:48px; height:48px; ">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="18" height="18" fill="currentColor"
-                             viewBox="0 0 18 18">
-                            <path d="M15.562 8.1 3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- YouTube превью -->
-            <div class="tab-pane fade" id="video2" role="tabpanel" aria-labelledby="video2-tab">
-                <div class="ratio ratio-16x9 position-relative" id="yt-container">
-                    <button type="button" id="yt-load-btn"
-                            aria-label="Запустить youtube видео"
-                            style="
-                                position:absolute;
-                                top:50%;
-                                left:50%;
-                                transform:translate(-50%,-50%);
-                                background: #00b2ff;
-                                color:#fff;
-                                border:0; border-radius:50%;
-                                width:48px; height:48px; ">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="18" height="18" fill="currentColor"
-                             viewBox="0 0 18 18">
-                            <path d="M15.562 8.1 3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8"></path>
-                        </svg>
-                    </button>
-                </div>
+    <!-- Content -->
+    <div class="tab-content mt-1" id="videoTabsContent">
+        <!-- VK превью -->
+        <div class="tab-pane fade" id="video1" role="tabpanel" aria-labelledby="video1-tab">
+            <div class="ratio ratio-16x9 position-relative" id="vk-container">
+                <img src="{{ include.item.image }}" alt="vk preview" class="my-0">
+                <button type="button" id="vk-load-btn"
+                        aria-label="Запустить vk видео"
+                        style="
+                            position:absolute;
+                            top:50%;
+                            left:50%;
+                            transform:translate(-50%,-50%);
+                            background: #00b2ff;
+                            color:#fff;
+                            border:0; border-radius:50%;
+                            width:48px; height:48px; ">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="18" height="18" fill="currentColor"
+                         viewBox="0 0 18 18">
+                        <path d="M15.562 8.1 3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8"></path>
+                    </svg>
+                </button>
             </div>
         </div>
+        <!-- YouTube превью -->
+        <div class="tab-pane fade show active" id="video2" role="tabpanel" aria-labelledby="video2-tab">
+            <div class="ratio ratio-16x9 position-relative" id="yt-container">
+                <img src="{{ include.item.image }}" alt="vk preview" class="my-0">
 
+                <button class="glass-play-btn" id="yt-load-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="18" height="18" fill="white"
+                         viewBox="0 0 18 18">
+                        <path d="M15.562 8.1 3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8"></path>
+                    </svg>
+
+                    <span class="fs-6">Воспроизвести</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black">
         <!-- Tabs -->
-        <ul class="nav nav-pills py-3 justify-content-end" style="list-style: none" id="videoTabs" role="tablist">
+        <ul class="nav nav-pills py-2 justify-content-end" style="list-style: none" id="videoTabs" role="tablist">
             <li class="nav-item mb-0" role="presentation">
-                <button class="nav-link active" id="video1-tab" data-bs-toggle="tab" data-bs-target="#video1" type="button" role="tab" aria-controls="video1" aria-selected="true">
+                <button class="nav-link fs-5" id="video1-tab" data-bs-toggle="tab" data-bs-target="#video1" type="button" role="tab" aria-controls="video1" aria-selected="false">
                     ВК видео
                 </button>
             </li>
             <li class="nav-item mb-0" role="presentation">
-                <button class="nav-link" id="video2-tab" data-bs-toggle="tab" data-bs-target="#video2" type="button" role="tab" aria-controls="video2" aria-selected="false">
+                <button class="nav-link active fs-5" id="video2-tab" data-bs-toggle="tab" data-bs-target="#video2" type="button" role="tab" aria-controls="video2" aria-selected="true">
                     Youtube
                 </button>
             </li>
         </ul>
     </div>
-
-    <script defer>
-        document.addEventListener('DOMContentLoaded', () => {
-          const vkTab = document.getElementById('video1-tab');
-          const ytTab = document.getElementById('video2-tab');
-          const vkContainer = document.getElementById('vk-container');
-          const ytContainer = document.getElementById('yt-container');
-
-          function loadVK() {
-            if (!vkContainer.dataset.loaded) {
-              const params = "{{ include.item.vk }}".split("-");
-              const tokens = params[1].split("_");
-              vkContainer.innerHTML = `<iframe src="https://vk.com/video_ext.php?oid=-${tokens[0]}&id=${tokens[1]}&hd=3"
-                width="1280" height="720"
-                style="background-color:#000"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-                frameborder="0" allowfullscreen></iframe>`;
-              vkContainer.dataset.loaded = "true";
-            }
-          }
-
-          function loadYT() {
-            if (!ytContainer.dataset.loaded) {
-              ytContainer.innerHTML = `<iframe src="{{ include.item.youtube }}" width="1280" height="720"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-              ytContainer.dataset.loaded = "true";
-            }
-          }
-
-          vkTab.addEventListener('click', loadVK);
-          ytTab.addEventListener('click', loadYT);
-          const vkBtn = document.getElementById('vk-load-btn');
-          const ytBtn = document.getElementById('yt-load-btn');
-          if (vkBtn) vkBtn.addEventListener('click', loadVK);
-          if (ytBtn) ytBtn.addEventListener('click', loadYT);
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const nav = document.getElementById('videoTabs');
-          const tabs = nav.querySelectorAll('.nav-link');
-
-          const activeBg = document.createElement('div');
-          activeBg.classList.add('active-bg');
-
-          function moveBg(target) {
-            const rect = target.getBoundingClientRect();
-            const navRect = nav.getBoundingClientRect();
-            activeBg.style.width = rect.width + 'px';
-            activeBg.style.left = (rect.left - navRect.left) + 'px';
-          }
-
-          // начальная позиция
-          const active = nav.querySelector('.nav-link.active');
-          if (active) moveBg(active);
-          nav.appendChild(activeBg);
-
-          // двигаем фон при переключении табов
-          tabs.forEach(tab => {
-            tab.addEventListener('shown.bs.tab', e => moveBg(e.target));
-          });
-        });
-    </script>
 </div>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const vkTab = document.getElementById('video1-tab');
+      const ytTab = document.getElementById('video2-tab');
+      const vkContainer = document.getElementById('vk-container');
+      const ytContainer = document.getElementById('yt-container');
+
+      function loadVK() {
+        if (!vkContainer.dataset.loaded) {
+          const params = "{{ include.item.vk }}".split("-");
+          const tokens = params[1].split("_");
+          vkContainer.innerHTML = `<iframe src="https://vk.com/video_ext.php?oid=-${tokens[0]}&id=${tokens[1]}&hd=3"
+            width="1280" height="720"
+            style="background-color:#000"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+            frameborder="0" allowfullscreen></iframe>`;
+          vkContainer.dataset.loaded = "true";
+        }
+      }
+
+      function loadYT() {
+        if (!ytContainer.dataset.loaded) {
+          ytContainer.innerHTML = `<iframe src="{{ include.item.youtube }}" width="1280" height="720"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+          ytContainer.dataset.loaded = "true";
+        }
+      }
+
+      vkTab.addEventListener('click', loadVK);
+      ytTab.addEventListener('click', loadYT);
+      const vkBtn = document.getElementById('vk-load-btn');
+      const ytBtn = document.getElementById('yt-load-btn');
+      if (vkBtn) vkBtn.addEventListener('click', loadVK);
+      if (ytBtn) ytBtn.addEventListener('click', loadYT);
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const nav = document.getElementById('videoTabs');
+      const tabs = nav.querySelectorAll('.nav-link');
+
+      const activeBg = document.createElement('div');
+      activeBg.classList.add('active-bg');
+
+      function moveBg(target) {
+        const rect = target.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+        activeBg.style.width = rect.width + 'px';
+        activeBg.style.left = (rect.left - navRect.left) + 'px';
+      }
+
+      // двигаем фон при переключении табов
+      tabs.forEach(tab => {
+        tab.addEventListener('shown.bs.tab', e => moveBg(e.target));
+      });
+    });
+</script>
 
 

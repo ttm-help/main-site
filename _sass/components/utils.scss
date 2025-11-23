@@ -19,3 +19,34 @@
     font-size: 2rem;
   }
 }
+
+/* НЕАКТИВНАЯ кнопка */
+.nav-link {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff; /* чтобы всё выглядело аккуратно */
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+/* АКТИВНАЯ кнопка */
+.nav-pills .nav-link.active {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* Чтобы не прыгал размер при активации */
+.nav-link,
+.nav-link.active {
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.nav-link.active:hover {
+    background-color: #f5f5f5;
+}
