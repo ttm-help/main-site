@@ -1,11 +1,5 @@
 list:
-  - url: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
+  - image: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
+    youtube: https://www.youtube.com/embed/vRTqJ2ZTH8Y
+    vk: https://vkvideo.ru/video-211245681_456239018
     name: video 1
-  - url: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
-    name: video 2
-  - url: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
-    name: video 5
-  - url: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
-    name: video 4
-  - url: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
-    name: video 3

@@ -113,9 +113,29 @@ image: ""
                     <div class="video-scroll-wrapper w-100">
                         {% assign feedbacks = site.data.feedbacks.list %}
                         {% for feedback in feedbacks %}
-                            <div class="video-card">
-                                <img src="{{ feedback.url }}">
-                                <p class="mt-2 mb-1">{{ feedback.name }}</p>
+
+                            <a class="video-card text-decoration-none"
+                                data-bs-toggle="modal"
+                                data-bs-target="#feedbackModal-{{ forloop.index0 }}"
+                                style="cursor:pointer;">
+                            
+                                <img src="{{ feedback.image }}" class="w-100 rounded-4 shadow" />
+                            
+                                <p class="mt-2 mb-1 text-white">
+                                    {{ feedback.name }}
+                                </p>
+                            </a>
+
+                            <div class="modal fade" id="feedbackModal-{{ forloop.index0 }}" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl">
+                                    <div class="modal-content bg-dark rounded-4">
+                                        <div class="modal-body p-0">
+                                            <div class="ratio ratio-16x9">
+                                                {% include video-block.html item=feedback %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
