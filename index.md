@@ -129,7 +129,7 @@ date: 2025-10-22
                                     <div class="modal-content bg-dark rounded-4">
                                         <div class="modal-body p-1">
                                             <div>
-                                                {% include video-block.html item=feedback %}
+                                                {% include video-block.html item=feedback index=forloop.index0 %}
                                             </div>
                                         </div>
                                     </div>

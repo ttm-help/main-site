@@ -1,10 +1,10 @@
 <!-- Content -->
-<div class="tab-content mt-1" id="videoTabsContent">
+<div class="tab-content mt-1" id="videoTabsContent-{{ include.index }}">
     <!-- VK превью -->
-    <div class="tab-pane fade" id="video1" role="tabpanel" aria-labelledby="video1-tab">
-        <div class="ratio ratio-16x9 position-relative" id="vk-container">
+    <div class="tab-pane fade" id="video1-{{ include.index }}" role="tabpanel" aria-labelledby="video1-tab">
+        <div class="ratio ratio-16x9 position-relative" id="vk-container-{{ include.index }}">
             <img src="{{ include.item.image }}" alt="vk preview" class="my-0">
-            <button type="button" id="vk-load-btn"
+            <button type="button" id="vk-load-btn-{{ include.index }}"
                     aria-label="Запустить vk видео"
                     style="
                             position:absolute;
@@ -24,11 +24,11 @@
         </div>
     </div>
     <!-- YouTube превью -->
-    <div class="tab-pane fade show active" id="video2" role="tabpanel" aria-labelledby="video2-tab">
-        <div class="ratio ratio-16x9 position-relative" id="yt-container">
+    <div class="tab-pane fade show active" id="video2-{{ include.index }}" role="tabpanel" aria-labelledby="video2-tab-{{ include.index }}">
+        <div class="ratio ratio-16x9 position-relative" id="yt-container-{{ include.index }}">
             <img src="{{ include.item.image }}" alt="vk preview" class="my-0">
 
-            <button class="glass-play-btn" id="yt-load-btn">
+            <button class="glass-play-btn" id="yt-load-btn-{{ include.index }}">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      width="18" height="18" fill="white"
                      viewBox="0 0 18 18">
@@ -42,16 +42,16 @@
 
     <div class="bg-black">
         <!-- Tabs -->
-        <ul class="nav nav-pills py-2 justify-content-end" style="list-style: none" id="videoTabs" role="tablist">
+        <ul class="nav nav-pills py-2 justify-content-end" style="list-style: none" id="videoTabs-{{ include.index }}" role="tablist">
             <li class="nav-item mb-0" role="presentation">
-                <button class="nav-link fs-5" id="video1-tab" data-bs-toggle="tab" data-bs-target="#video1"
-                        type="button" role="tab" aria-controls="video1" aria-selected="false">
+                <button class="nav-link fs-5" id="video1-tab-{{ include.index }}" data-bs-toggle="tab" data-bs-target="#video1-{{ include.index }}"
+                        type="button" role="tab" aria-controls="video1-{{ include.index }}" aria-selected="false">
                     ВК видео
                 </button>
             </li>
             <li class="nav-item mb-0" role="presentation">
-                <button class="nav-link active fs-5" id="video2-tab" data-bs-toggle="tab" data-bs-target="#video2"
-                        type="button" role="tab" aria-controls="video2" aria-selected="true">
+                <button class="nav-link active fs-5" id="video2-tab-{{ include.index }}" data-bs-toggle="tab" data-bs-target="#video2-{{ include.index }}"
+                        type="button" role="tab" aria-controls="video2-{{ include.index }}" aria-selected="true">
                     Youtube
                 </button>
             </li>
@@ -60,62 +60,70 @@
 </div>
 
 <script defer>
-    document.addEventListener('hidden.bs.modal', () => {
-        const vkContainer = document.getElementById('vk-container');
-        // Полностью вычищаем VK
-        if (vkContainer) {
-            vkContainer.innerHTML = '';
-            delete vkContainer.dataset.loaded;
-        }
+function getVkFrame{{ include.index }}() {
+    const params = "{{ include.item.vk }}".split("-");
+    const tokens = params[1].split("_");
 
-        const ytContainer = document.getElementById('yt-container');
-        // Полностью вычищаем YT
-        if (ytContainer) {
-            ytContainer.innerHTML = '';
-            delete ytContainer.dataset.loaded;
-        }
-    });
+    return `<iframe src="https://vk.com/video_ext.php?oid=-${tokens[0]}&id=${tokens[1]}&hd=3"
+        width="1280" height="720"
+        style="background-color:#000"
+        allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+        frameborder="0" allowfullscreen></iframe>`;
+}
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const vkTab = document.getElementById('video1-tab');
-      const ytTab = document.getElementById('video2-tab');
-      const vkContainer = document.getElementById('vk-container');
-      const ytContainer = document.getElementById('yt-container');
+function getYoutubeFrame{{ include.index }}() {
+    return `<iframe src="{{ include.item.youtube }}" width="1280" height="720"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+}
 
-      function loadVK() {
-        if (!vkContainer.dataset.loaded) {
-          const params = "{{ include.item.vk }}".split("-");
-          const tokens = params[1].split("_");
-          vkContainer.innerHTML = `<iframe src="https://vk.com/video_ext.php?oid=-${tokens[0]}&id=${tokens[1]}&hd=3"
-            width="1280" height="720"
-            style="background-color:#000"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-            frameborder="0" allowfullscreen></iframe>`;
-          vkContainer.dataset.loaded = "true";
-        }
-      }
 
-      function loadYT() {
-        if (!ytContainer.dataset.loaded) {
-          ytContainer.innerHTML = `<iframe src="{{ include.item.youtube }}" width="1280" height="720"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-          ytContainer.dataset.loaded = "true";
-        }
-      }
+document.addEventListener('hidden.bs.modal', () => {
+    const vkContainer = document.getElementById('vk-container-{{ include.index }}');
+    // Полностью вычищаем VK
+    if (vkContainer) {
+       vkContainer.innerHTML = getVkFrame{{ include.index }}();
+    }
 
-      vkTab.addEventListener('click', loadVK);
-      ytTab.addEventListener('click', loadYT);
-      const vkBtn = document.getElementById('vk-load-btn');
-      const ytBtn = document.getElementById('yt-load-btn');
-      if (vkBtn) vkBtn.addEventListener('click', loadVK);
-      if (ytBtn) ytBtn.addEventListener('click', loadYT);
-    });
+    const ytContainer = document.getElementById('yt-container-{{ include.index }}');
+    // Полностью вычищаем YT
+    if (ytContainer) {
+        ytContainer.innerHTML = getYoutubeFrame{{ include.index }}();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  function loadVK() {
+    const vkContainer = document.getElementById('vk-container-{{ include.index }}');
+    if (!vkContainer.dataset.loaded) {
+      vkContainer.innerHTML = getVkFrame{{ include.index }}();
+      vkContainer.dataset.loaded = "true";
+    }
+  }
+
+  function loadYT() {
+    const ytContainer = document.getElementById('yt-container-{{ include.index }}');
+    if (!ytContainer.dataset.loaded) {
+      ytContainer.innerHTML = getYoutubeFrame{{ include.index }}();
+      ytContainer.dataset.loaded = "true";
+    }
+  }
+
+  const vkTab = document.getElementById('video1-tab-{{ include.index }}');
+  const ytTab = document.getElementById('video2-tab-{{ include.index }}');
+  vkTab.addEventListener('click', loadVK);
+  ytTab.addEventListener('click', loadYT);
+
+  const vkBtn = document.getElementById('vk-load-btn-{{ include.index }}');
+  const ytBtn = document.getElementById('yt-load-btn-{{ include.index }}');
+  if (vkBtn) vkBtn.addEventListener('click', loadVK);
+  if (ytBtn) ytBtn.addEventListener('click', loadYT);
+});
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const nav = document.getElementById('videoTabs');
+      const nav = document.getElementById('videoTabs-{{ include.index }}');
       const tabs = nav.querySelectorAll('.nav-link');
 
       const activeBg = document.createElement('div');
