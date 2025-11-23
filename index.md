@@ -5,9 +5,9 @@ keywords: ""
 image: ""
 ---
 
-<div style="padding-top: 150px">
+<div class="mt-5">
     <div class="container mx-auto" style="w-75">
-        <div class="row">
+        <div class="row responsive-padding">
            <div class="col-12 col-md-3 mb-5">
                 {% include social-links.html %}
             </div>
@@ -20,81 +20,40 @@ image: ""
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row responsive-padding">
            <div class="col-12 col-md-3 mb-5">
                 Обо мне
             </div>
             <div class="col-12 col-md-9">
-                <p>Работаю с 2012 года и использую доказательные методы психотерапии, признанные ведущими международными организациями — APA (Американская психологическая ассоциация), NICE (Национальный институт здравоохранения Великобритании) и Всемирной организацией здравоохранения (WHO).</p>
-                <p>Протоколы работы прошли десятки клинических исследований — измеримо, безопасно и без магического мышления. </p>
+                <div class="mx-3">
+                    <p>Работаю с 2012 года и использую доказательные методы психотерапии, признанные ведущими международными организациями — APA (Американская психологическая ассоциация), NICE (Национальный институт здравоохранения Великобритании) и Всемирной организацией здравоохранения (WHO).</p>
+                    <p>Протоколы работы прошли десятки клинических исследований — измеримо, безопасно и без магического мышления. </p>
+                </div>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row responsive-padding">
              <div class="col-12 col-md-3 mb-5">
                 С чем я работаю
             </div>
             <div class="col-12 col-md-9">
-                {% assign services = site.data.services.list %}
-                {% for service in services %}
-                    <div class="row align-items-center">
-                        <div class="col-auto d-flex align-items-center">
-                            <img 
-                              src="{{ service.url }}"
-                              width="110" height="110"
-                              class="figure-img img-fluid rounded-5 shadow"
-                            />
+                <div class="ms-3">
+                    {% assign services = site.data.services.list %}
+                    {% for service in services %}
+                        <div class="row align-items-center mb-5">
+                            <div class="col-auto d-flex align-items-center">
+                                <img 
+                                  src="{{ service.url }}"
+                                  width="110" height="110"
+                                  class="figure-img img-fluid rounded-5 shadow"
+                                />
+                                </div>
+                                <div class="col d-flex align-items-center">
+                                <div>
+                                  <span class="fw-bold">{{ service.name }}</span> <br/>
+                                  <span>{{ service.description }}</span>
+                                </div>
                             </div>
-                            <div class="col d-flex align-items-center">
-                            <div>
-                              <span class="fw-bold">{{ service.name }}</span> <br/>
-                              <span>{{ service.description }}</span>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-
-
-        <div class="row mt-5">
-            <div class="col-12 col-md-3 mb-5">
-                Как проходит работа
-            </div>
-            <div class="col-12 col-md-9">
-                <p>Онлайн, 1 раз в неделю, продолжительность 55 минут. Между встречами — поддержка и упражнения, чтобы результат закреплялся в реальной жизни.</p>
-            </div>
-        </div>
-
-
-        <div class="row mt-5">
-            <div class="col-12 col-md-3 mb-5">
-                Образование
-            </div>
-            <div class="col-12 col-md-9">
-                {% assign educations = site.data.education.list %}
-                {% for education in educations %}
-                    <div class="row">
-                        <span class="fw-bold">{{ education.name }}</span><br/>
-                        <span>{{ education.institute }}</span>
-                    </div>
-                    <hr style="margin: 20px 0">
-                {% endfor %}
-            </div>
-        </div>
-
-
-        <div class="row mt-5">
-            <div class="col-12 col-md-3 mb-5">
-                Отзывы
-            </div>
-            <div class="col-12 col-md-9">
-                <div class="video-scroll-wrapper w-100">
-                    {% assign feedbacks = site.data.feedbacks.list %}
-                    {% for feedback in feedbacks %}
-                        <div class="video-card">
-                            <img src="{{ feedback.url }}">
-                            <p class="fw-bold mt-2 mb-1">{{ feedback.name }}</p>
                         </div>
                     {% endfor %}
                 </div>
@@ -102,7 +61,58 @@ image: ""
         </div>
 
 
-        <div class="row mt-5">
+        <div class="row responsive-padding">
+            <div class="col-12 col-md-3 mb-5">
+                Как проходит работа
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="mx-3">
+                    <p>Онлайн, 1 раз в неделю, продолжительность 55 минут. Между встречами — поддержка и упражнения, чтобы результат закреплялся в реальной жизни.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row responsive-padding">
+            <div class="col-12 col-md-3 mb-5">
+                Образование
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="mx-3">
+                    {% assign educations = site.data.education.list %}
+                    {% for education in educations %}
+                        <div class="row">
+                            <span class="fw-bold">{{ education.name }}</span><br/>
+                            <span>{{ education.institute }}</span>
+                        </div>
+                        <hr style="margin: 20px 0">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row responsive-padding">
+            <div class="col-12 col-md-3 mb-5">
+                Отзывы
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="ms-3">
+                    <div class="video-scroll-wrapper w-100">
+                        {% assign feedbacks = site.data.feedbacks.list %}
+                        {% for feedback in feedbacks %}
+                            <div class="video-card">
+                                <img src="{{ feedback.url }}">
+                                <p class="fw-bold mt-2 mb-1">{{ feedback.name }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row responsive-padding">
             <div class="col-12 col-md-3 mb-5">
                 Стоимость
             </div>
@@ -124,7 +134,6 @@ image: ""
                 </div>
             </div>
         </div>
-
 
         {% include footer.html %}
     </div>
