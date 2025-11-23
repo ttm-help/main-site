@@ -5,16 +5,16 @@ keywords: ""
 image: ""
 ---
 
-<div class="mt-5">
+<div>
     <div class="container mx-auto" style="w-75">
         <div class="row responsive-padding">
            <div class="col-12 col-md-3 mb-5">
                 {% include social-links.html %}
             </div>
-            <div class="col-12 col-md-9 d-flex flex-column align-items-end text-end">
+            <div class="col-12 col-md-9 d-flex flex-column align-items-center align-items-md-end text-center text-md-end">
                 <img src="/assets/images/main.jpg"
-                        style="height:300px"
-                        class="figure-img img-fluid rounded-5 shadow me-3"
+                        style="height:600px"
+                        class="figure-img img-fluid rounded-5 shadow mb-3"
                         alt="{{ page.title }}"/>
                 <div class="me-3">
                     <span class="fs-4">Я Оксана Коновалова — психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
@@ -29,7 +29,7 @@ image: ""
                 </span>
             </div>
             <div class="col-12 col-md-9">
-                <div class="mx-3">
+                <div class="mx-3 fs-5">
                     <p>Работаю с 2012 года и использую доказательные методы психотерапии, признанные ведущими международными организациями — APA (Американская психологическая ассоциация), NICE (Национальный институт здравоохранения Великобритании) и Всемирной организацией здравоохранения (WHO).</p>
                     <p>Протоколы работы прошли десятки клинических исследований — измеримо, безопасно и без магического мышления. </p>
                 </div>
@@ -53,11 +53,11 @@ image: ""
                                   width="110" height="110"
                                   class="figure-img img-fluid rounded-5 shadow"
                                 />
-                                </div>
-                                <div class="col d-flex align-items-center">
+                            </div>
+                            <div class="col d-flex align-items-center">
                                 <div>
-                                  <span class="fw-bold">{{ service.name }}</span> <br/>
-                                  <span>{{ service.description }}</span>
+                                    <p class="fw-bold fs-5 mb-1">{{ service.name }}</p>
+                                    <p class="fs-6 fw-light">{{ service.description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ image: ""
                 </span>
             </div>
             <div class="col-12 col-md-9">
-                <div class="mx-3">
+                <div class="mx-3 fs-5">
                     <p>Онлайн, 1 раз в неделю, продолжительность 55 минут. Между встречами — поддержка и упражнения, чтобы результат закреплялся в реальной жизни.</p>
                 </div>
             </div>
@@ -92,10 +92,10 @@ image: ""
                     {% assign educations = site.data.education.list %}
                     {% for education in educations %}
                         <div class="row">
-                            <span class="fw-bold">{{ education.name }}</span><br/>
-                            <span>{{ education.institute }}</span>
+                            <p class="fw-bold fs-5 mb-0">{{ education.name }}</p>
+                            <p class="fs-6 fw-light">{{ education.institute }}</p>
                         </div>
-                        <hr style="margin: 20px 0">
+                        <hr style="margin: 10px 0">
                     {% endfor %}
                 </div>
             </div>
@@ -150,7 +150,7 @@ image: ""
                                         <span class="fs-4 fw-bold">{{ offer.name }}</span>
                                     </div>
                                     <div class="row text-center mt-2">
-                                        <p class="fw-light">
+                                        <p class="fs-5 fw-light">
                                             {{ offer.description }}
                                         </p>
                                     </div>
@@ -184,4 +184,4 @@ image: ""
 
         {% include footer.html %}
     </div>
-</a>
+</div>
