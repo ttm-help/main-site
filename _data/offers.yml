@@ -1,16 +1,36 @@
 list:
   - name: "Первичная консультация"
-    description: ""
+    description: "Проведу диагностику и проверю состояние"
+    pic: "assets/images/offers/initial.jpg"
     price: "8 500 ₽"
+    results:
+      - узнаете свое состояние
+      - получите мои рекомендации
+      - план лечения
 
   - name: "Системная работа"
     description: "блок из 4 встреч"
+    pic: "assets/images/offers/system-work.jpg"
     price: "34 000 ₽"
+    results:
+      - узнаете психологические фишки
+      - домашняя работа
+      - обратная связь между занятиями
 
   - name: "Тренинг навыков"
     description: "4 занятия"
+    pic: "assets/images/offers/training.jpg"
     price: "19 000 ₽"
+    results:
+      - отточите свои скилы
+      - доступ к материалам в телеграм канале
+      - обратная связь каждую неделю
 
   - name: "Книжный психотерапевтический клуб"
     description: "с доступом до 1 января 2026 г"
+    pic: "assets/images/offers/book.jpg"
     price: "5 000 ₽"
+    results:
+      - почитаете книги
+      - научитесь понимать себя
+      - не станете психовать из за ерунды

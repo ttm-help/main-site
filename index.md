@@ -131,18 +131,51 @@ image: ""
                 </span>
             </div>
             <div class="col-12 col-md-9">
-                <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+                <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
                     {% assign offers = site.data.offers.list %}
                     {% for offer in offers %}
                         <div class="col">
-                            <div class="card card-clean h-100 rounded-4 p-3">
-                                <p class="fw-bold">{{ offer.name }}</p>
-                                <p class="mt-2">
-                                    {{ offer.description }}
-                                </p>
-                                <p class="fs-4 fw-bold mt-3">{{ offer.price }}</p>
-                                <a href="#" class="btn btn-dark w-100 mt-2 mb-3">Записаться</a>
-                            </div>
+                            <a href="https://t.me/{{ site.data.contacts.telegram }}" target="_blank" class="text-decoration-none">
+                                <div class="card card-clean h-100 rounded-4 p-3">
+                                    <div class="row text-center">
+                                        <div class="mt-3">
+                                            <img 
+                                              src="{{ offer.pic }}?random={{offer.name}}"
+                                              width="150" height="150"
+                                              class="figure-img img-fluid rounded-5 shadow"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row text-center mt-2">
+                                        <span class="fs-4 fw-bold">{{ offer.name }}</span>
+                                    </div>
+                                    <div class="row text-center mt-2">
+                                        <p class="fw-light">
+                                            {{ offer.description }}
+                                        </p>
+                                    </div>
+                                    <div class="row text-center mt-2 mx-1 text-center">
+                                        <div class="offer-price offer-price-color-{{ forloop.index0 }}">
+                                            <p class="fs-4 fw-bold mt-3">{{ offer.price }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center mt-2 mb-4">
+                                        {% assign results = offer.results %}
+                                        {% for result in results %}
+                                            <div class="d-flex align-items-center">
+                                                <svg width="50" height="50" class="me-2 d-block">
+                                                    <use xlink:href="#icon-mark"></use>
+                                                </svg>
+                                            
+                                                <span class="fs-5 text-start">{{ result }}</span>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="row text-center mt-auto mb-3 mx-1">
+                                        <span class="btn btn-dark w-100 py-3 fs-5">Записаться</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
@@ -151,4 +184,4 @@ image: ""
 
         {% include footer.html %}
     </div>
-</div>
+</a>

@@ -2,7 +2,8 @@
   background: #fff;
   color: #000;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 
   &:hover {
     transform: translateY(-6px);
@@ -17,4 +18,29 @@
       background: #333;
     }
   }
+}
+
+.offer-price {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #fff;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.offer-price-color-0 {
+    background: linear-gradient(135deg, #0d342f, #1b5d56);
+}
+
+.offer-price-color-1 {
+    background: linear-gradient(135deg, #502e2e, #7a4949);
+}
+
+.offer-price-color-2 {
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+}
+
+.offer-price-color-3 {
+    background: linear-gradient(135deg, #131f33, #24395c);
 }
