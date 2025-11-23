@@ -15,7 +15,7 @@ date: 2025-10-22
                         class="figure-img img-fluid rounded-5 shadow mb-3"
                         alt="{{ page.title }}"/>
                 <div class="me-3 text-end">
-                    <span class="fs-4">Я, Оксана Коновалова — клинический психолог,<br/><small class="text-body-secondary">доказательные протоколы КПТ и ДБТ</small></span>
+                    <span class="fs-4">Я, Оксана Коновалова — клинический психолог,<br/><small class="text-body-secondary">юридический психолог, доказательные протоколы КПТ и ДБТ</small></span>
                 </div>
             </div>
         </div>
