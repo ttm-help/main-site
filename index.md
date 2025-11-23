@@ -16,8 +16,8 @@ image: ""
                         style="height:600px"
                         class="figure-img img-fluid rounded-5 shadow mb-3"
                         alt="{{ page.title }}"/>
-                <div class="me-3">
-                    <span class="fs-4">Я, Оксана Коновалова — клинический психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
+                <div class="me-3 text-end">
+                    <span class="fs-4">Я, Оксана Коновалова — клинический психолог,<br/><small class="text-body-secondary">доказательные протоколы КПТ и ДБТ</small></span>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@ image: ""
                             
                                 <img src="{{ feedback.image }}" class="w-100 rounded-4 shadow" />
                             
-                                <p class="mt-2 mb-1 text-white">
+                                <p class="mt-2 mb-1 text-black fs-6 fw-light">
                                     {{ feedback.name }}
                                 </p>
                             </a>

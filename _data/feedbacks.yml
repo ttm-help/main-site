@@ -1,5 +1,22 @@
 list:
-  - image: https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg
-    youtube: https://www.youtube.com/embed/vRTqJ2ZTH8Y
+  - image: "assets/images/feedbacks/feedback-1.webp"
+    youtube: https://www.youtube.com/embed/ZeoerrAsdXs
     vk: https://vkvideo.ru/video-211245681_456239018
-    name: video 1
+    name: "Религия и психотерапия: в чем разница и как их совместить? Глубокий инсайт Оксаной"
+
+  - image: "assets/images/feedbacks/feedback-2.jpg"
+    youtube: https://www.youtube.com/embed/AhUpI0HXnuI
+    vk: https://vkvideo.ru/video-211245681_456239018
+    name: "Самооценка и критика: Как научиться не реагировать на чужое мнение? | Интервью с участницей клуба"
+
+  - image: "assets/images/feedbacks/feedback-3.jpg"
+    youtube: https://www.youtube.com/embed/NUr2LeJp1Wk
+    vk: https://vkvideo.ru/video-211245681_456239018
+    name: "Как перестать быть жертвой и увеличить доход в 2 раза? | Отзыв участника клуба"
+
+
+  - image: "assets/images/feedbacks/feedback-4.jpg"
+    youtube: https://www.youtube.com/embed/Ils2GLPgx38
+    vk: https://vkvideo.ru/video-211245681_456239018
+    name: "Как я научилась жить в гармонии и перестала «заедать» стресс. История Виктории"
+
