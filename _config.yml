@@ -28,6 +28,7 @@ plugins:
   - jekyll-minifier
   - jekyll-sitemap
   - jekyll-image-size
+  - jekyll-seo-tag
 
 exclude:
   - "*.iml"
