@@ -1,8 +1,6 @@
 ---
 layout: default
 date: 2025-10-22
-keywords: ""
-image: ""
 ---
 
 <div>
