@@ -16,7 +16,7 @@ image: ""
                         style="height:300px"
                         class="figure-img img-fluid rounded-5 shadow"
                         alt="{{ page.title }}"/>
-                <h2>Я Оксана Коновалова — Психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></h2>
+                <span class="fs-4">Я Оксана Коновалова — психолог,<br/><small class="text-body-secondary">специализирующийся на трихотилломании</small></span>
             </div>
         </div>
 
