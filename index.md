@@ -158,7 +158,7 @@ date: 2025-10-22
                                     <div class="row text-center">
                                         <div class="mt-3">
                                             <img 
-                                              src="{{ offer.pic }}?random={{offer.name}}"
+                                              src="{{ offer.pic }}"
                                               width="150" height="150"
                                               class="figure-img img-fluid rounded-5 shadow"
                                             />
